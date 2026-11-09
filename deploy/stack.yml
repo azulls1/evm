@@ -1,0 +1,129 @@
+# Docker Swarm · VPS iaGentek · https://${DOMINIO} (el dominio lo exporta deploy.sh desde deploy/.env.deploy)
+# Redis se nombra «valorganado_redis»: en la red compartida iagenteknet el nombre corto «redis» resuelve al de otro stack.
+# Despliegue: deploy/deploy.sh (construye con el sha del commit y exporta TAG).
+version: "3.8"
+
+x-reinicio: &reinicio
+  # "any": un servicio que sale con código 0 también se relanza (con on-failure se queda en 0/1)
+  condition: any
+  delay: 5s
+  window: 60s
+
+services:
+  api:
+    image: valorganado-backend:${TAG}
+    environment:
+      - DATABASE_URL_FILE=/run/secrets/valorganado_db_dsn
+      - REDIS_URL=redis://valorganado_redis:6379/0
+      - REDIS_RESULT_URL=redis://valorganado_redis:6379/1
+      - CORS_ORIGINS=https://${DOMINIO}
+    secrets: [valorganado_db_dsn]
+    volumes: [paquetes:/data/paquetes]
+    networks: [interna, iagenteknet, supabase_maestria]
+    deploy:
+      replicas: 1
+      restart_policy: *reinicio
+      resources: { limits: { memory: 384M, cpus: "1.0" } }
+      update_config: { order: start-first, failure_action: rollback }
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=iagenteknet
+        - traefik.http.routers.valorganado-api.rule=Host(`${DOMINIO}`) && PathPrefix(`/api`)
+        - traefik.http.routers.valorganado-api.entrypoints=websecure
+        - traefik.http.routers.valorganado-api.tls.certresolver=letsencryptresolver
+        # Prioridad explícita ALTA: debe ganarle al router del frontend (Host a secas)
+        - traefik.http.routers.valorganado-api.priority=100
+        - traefik.http.routers.valorganado-api.service=valorganado-api
+        - traefik.http.routers.valorganado-api.middlewares=valorganado-hsts,valorganado-cabeceras-api,valorganado-limite,valorganado-cuerpo
+        # Escrituras (escenario, simular, generar ZIP): límite más estricto por IP
+        - traefik.http.routers.valorganado-api-escritura.rule=Host(`${DOMINIO}`) && PathPrefix(`/api`) && Method(`POST`)
+        - traefik.http.routers.valorganado-api-escritura.entrypoints=websecure
+        - traefik.http.routers.valorganado-api-escritura.tls.certresolver=letsencryptresolver
+        - traefik.http.routers.valorganado-api-escritura.priority=110
+        - traefik.http.routers.valorganado-api-escritura.service=valorganado-api
+        - traefik.http.routers.valorganado-api-escritura.middlewares=valorganado-hsts,valorganado-cabeceras-api,valorganado-limite-escritura,valorganado-cuerpo
+        - traefik.http.services.valorganado-api.loadbalancer.server.port=8000
+        # Middlewares propios del stack (no se toca la configuración global de Traefik)
+        - traefik.http.middlewares.valorganado-hsts.headers.stsSeconds=31536000
+        - traefik.http.middlewares.valorganado-hsts.headers.stsIncludeSubdomains=false
+        - traefik.http.middlewares.valorganado-cabeceras-api.headers.contentTypeNosniff=true
+        - traefik.http.middlewares.valorganado-cabeceras-api.headers.frameDeny=true
+        - traefik.http.middlewares.valorganado-cabeceras-api.headers.referrerPolicy=no-referrer
+        - traefik.http.middlewares.valorganado-limite.ratelimit.average=20
+        - traefik.http.middlewares.valorganado-limite.ratelimit.period=1s
+        - traefik.http.middlewares.valorganado-limite.ratelimit.burst=60
+        - traefik.http.middlewares.valorganado-limite-escritura.ratelimit.average=60
+        - traefik.http.middlewares.valorganado-limite-escritura.ratelimit.period=1m
+        - traefik.http.middlewares.valorganado-limite-escritura.ratelimit.burst=10
+        - traefik.http.middlewares.valorganado-cuerpo.buffering.maxRequestBodyBytes=8192
+
+  worker:
+    image: valorganado-backend:${TAG}
+    command: ["celery", "-A", "app.celery_app", "worker", "--loglevel=INFO", "--concurrency=2", "-n", "evm@%h"]
+    environment:
+      - DATABASE_URL_FILE=/run/secrets/valorganado_db_dsn
+      - REDIS_URL=redis://valorganado_redis:6379/0
+      - REDIS_RESULT_URL=redis://valorganado_redis:6379/1
+    secrets: [valorganado_db_dsn]
+    volumes: [paquetes:/data/paquetes]
+    networks: [interna, supabase_maestria]
+    healthcheck:
+      test: ["CMD-SHELL", "celery -A app.celery_app inspect ping -d evm@$$HOSTNAME -t 5 | grep -q pong"]
+      interval: 60s
+      timeout: 15s
+      retries: 3
+      start_period: 30s
+    deploy:
+      replicas: 1
+      restart_policy: *reinicio
+      resources: { limits: { memory: 384M, cpus: "1.0" } }
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--save", "", "--appendonly", "no", "--maxmemory", "64mb", "--maxmemory-policy", "allkeys-lru"]
+    networks: [interna]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    deploy:
+      replicas: 1
+      restart_policy: *reinicio
+      resources: { limits: { memory: 96M } }
+
+  web:
+    image: valorganado-frontend:${TAG}
+    networks: [iagenteknet]
+    deploy:
+      replicas: 1
+      restart_policy: *reinicio
+      resources: { limits: { memory: 128M, cpus: "0.5" } }
+      update_config: { order: start-first, failure_action: rollback }
+      labels:
+        - traefik.enable=true
+        - traefik.docker.network=iagenteknet
+        - traefik.http.routers.valorganado-web.rule=Host(`${DOMINIO}`)
+        - traefik.http.routers.valorganado-web.entrypoints=websecure
+        - traefik.http.routers.valorganado-web.tls.certresolver=letsencryptresolver
+        - traefik.http.routers.valorganado-web.priority=10
+        - traefik.http.routers.valorganado-web.service=valorganado-web
+        - traefik.http.routers.valorganado-web.middlewares=valorganado-hsts,valorganado-limite
+        - traefik.http.services.valorganado-web.loadbalancer.server.port=8080
+
+volumes:
+  paquetes:   # ZIP de entregables generados desde la web (compartido por api y worker)
+
+networks:
+  interna:
+    driver: overlay
+  iagenteknet:
+    external: true
+  supabase_maestria:
+    external: true
+    name: supabase_maestria_internal
+
+secrets:
+  valorganado_db_dsn:
+    external: true
+    name: valorganado_db_dsn_v1

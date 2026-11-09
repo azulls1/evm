@@ -1,0 +1,259 @@
+{
+ "portada": {
+  "universidad": "Universidad Internacional de La Rioja (UNIR) México",
+  "programa": "Maestría en Inteligencia Artificial",
+  "asignatura": "Metodología de Diseño y Gestión de Proyectos",
+  "actividad": "Actividad 2 individual: Ejercicios de aplicación del método de gestión del valor ganado (EVM)",
+  "alumno": "Adonai Samael Hernández Mata",
+  "profesora": "Adriana Cervantes Castillo",
+  "fecha": "Noviembre de 2026"
+ },
+ "introduccion": "El proyecto es un desarrollo de software de seis meses con un presupuesto total (BAC) de $115 000. Se aplica el método de gestión del valor ganado del Tema 5 (apartado 5.9), que compara al corte el valor planificado (PV), el coste real (AC) y el valor ganado (EV = BAC × % de avance real acumulado). Los costes se juzgan comparando EV con AC, y los plazos, comparando EV con PV.",
+ "nota_avance": "El avance real del enunciado viene mes a mes; para el EV se usa el acumulado (37 % al mes 3 y 80 % al mes 5), y PV y AC se toman también acumulados al mismo corte.",
+ "formulas": [
+  {
+   "indicador": "EV (valor ganado)",
+   "formula": "BAC × % de avance real acumulado"
+  },
+  {
+   "indicador": "CV / CPI (coste)",
+   "formula": "CV = EV − AC  ·  CPI = EV ÷ AC  (CPI < 1: por encima del presupuesto)"
+  },
+  {
+   "indicador": "SV / SPI (plazo)",
+   "formula": "SV = EV − PV  ·  SPI = EV ÷ PV  (SPI < 1: retrasado)"
+  },
+  {
+   "indicador": "EAC según presupuesto original",
+   "formula": "EAC = AC + (BAC − EV)"
+  },
+  {
+   "indicador": "Duración estimada",
+   "formula": "Duración prevista ÷ SPI = 6 meses ÷ SPI"
+  }
+ ],
+ "datos": {
+  "bac": 115000,
+  "duracion": 6,
+  "pv_mes": [
+   23000,
+   15000,
+   16000,
+   19000,
+   20000,
+   22000
+  ],
+  "ac_mes": [
+   21000,
+   18000,
+   19000,
+   20000,
+   21000
+  ],
+  "avance_mes": [
+   8,
+   15,
+   14,
+   21,
+   22
+  ]
+ },
+ "partes": {
+  "A": {
+   "mes": 3,
+   "titulo": "Control del proyecto en el mes 3",
+   "preguntas": [
+    {
+     "n": 1,
+     "pregunta": "1. ¿Va por encima o por debajo del presupuesto?",
+     "enunciado": "De acuerdo con el índice del desempeño del costo, ¿el proyecto va por encima del presupuesto o por debajo?",
+     "respuesta": "Por encima. CPI = $42 550 ÷ $58 000 = 0,734, menor que 1: por cada peso gastado solo se ha producido trabajo por valor de 0,73 pesos. La variación de coste es CV = −$15 450: se ha gastado $15 450 más de lo que vale el trabajo hecho."
+    },
+    {
+     "n": 2,
+     "pregunta": "2. ¿Va retrasado o adelantado?",
+     "enunciado": "De acuerdo con el índice del desempeño del cronograma, ¿el proyecto va retrasado o adelantado?",
+     "respuesta": "Retrasado. SPI = $42 550 ÷ $54 000 = 0,788, menor que 1: se ha completado el 78,8 % del trabajo que el plan preveía para el mes 3. SV = −$11 450, que es el valor del trabajo programado que todavía no se ha hecho."
+    },
+    {
+     "n": 3,
+     "pregunta": "3. ¿Cuál será el coste estimado a la finalización (según el presupuesto original)?",
+     "enunciado": "A este ritmo de gasto, ¿cuál será la estimación de coste al final del proyecto? Es decir, ¿cuál será el coste estimado del proyecto a su finalización (según el presupuesto original)?",
+     "respuesta": "EAC = AC + (BAC − EV) = $58 000 + ($115 000 − $42 550) = $130 450. Es la variante a) del Tema 5, que supone que el trabajo restante costará lo presupuestado; el sobrecoste esperado es $15 450 (13,4 % sobre el BAC). Si la ineficiencia actual se mantuviera (EAC = BAC ÷ CPI), el coste subiría a $156 757: el escenario original es el optimista."
+    },
+    {
+     "n": 4,
+     "pregunta": "4. ¿Terminará con retraso o adelanto respecto a los seis meses?",
+     "enunciado": "A este ritmo, ¿se finalizará el proyecto con retraso o adelanto respecto a los seis meses previstos en el calendario?",
+     "respuesta": "Con retraso. Proyectando la duración con el SPI, 6 ÷ 0,788 = 7,61 meses: unos 1,6 meses (cerca de siete semanas) más de lo previsto si se mantiene el ritmo actual. Es una estimación, porque el Tema 5 no da una fórmula de plazo."
+    },
+    {
+     "n": 5,
+     "pregunta": "5. ¿Qué se podría hacer para controlar el proyecto?",
+     "enunciado": "¿Qué se podría hacer para controlar el proyecto? Debes basarte en al menos dos estrategias mencionadas a lo largo del curso.",
+     "respuesta": "El proyecto tiene a la vez sobrecoste y retraso, y los dos superan con holgura un umbral típico del 10 %. Con base en los apartados 5.7 y 5.8 del Tema 5, la asignación de recursos del Tema 4 y la adaptación de metodologías del Tema 2, propongo tres estrategias:"
+    }
+   ],
+   "estrategias": [
+    {
+     "titulo": "Acciones correctivas con umbrales de escalada (5.8).",
+     "texto": "Al superar el umbral de tolerancia, el problema deja de ser solo del equipo y se informa a la dirección. Se analiza la causa de la desviación por paquete de trabajo, se acuerdan acciones correctivas y se revisan en reuniones periódicas de estado con un informe de valor ganado mensual y con hitos de control."
+    },
+    {
+     "titulo": "Control de cambios de alcance (5.7).",
+     "texto": "Como el 80 % de los cambios viene del alcance, se congela el alcance comprometido, toda solicitud nueva pasa por evaluación de impacto en coste y plazo, se establecen cierres de aceptación formales de cada entregable y se evita el efecto gold plating, es decir, añadir trabajo que nadie pidió."
+    },
+    {
+     "titulo": "Recursos y paquetes pequeños en un enfoque híbrido (Temas 2 y 4, 5.8).",
+     "texto": "Se mantiene el marco clásico (línea base, valor ganado y control de cambios) y el trabajo restante se ejecuta en iteraciones ágiles de dos semanas, con paquetes pequeños priorizados con el cliente y aceptados al cierre de cada una: así el avance real es verificable y el EV, fiable. Los perfiles más productivos pasan a la ruta crítica; añadir personas tiene un límite (ley de Brooks)."
+    }
+   ]
+  },
+  "B": {
+   "mes": 5,
+   "titulo": "Control del proyecto en el mes 5",
+   "preguntas": [
+    {
+     "n": 1,
+     "pregunta": "1. ¿Va por encima o por debajo del presupuesto?",
+     "enunciado": "De acuerdo con el índice del desempeño del costo, ¿el proyecto va por encima del presupuesto o por debajo?",
+     "respuesta": "Sigue por encima, pero mucho menos. CPI = $92 000 ÷ $99 000 = 0,929, todavía menor que 1. La variación de coste es CV = −$7 000, menos de la mitad de los $15 450 del mes 3."
+    },
+    {
+     "n": 2,
+     "pregunta": "2. ¿Va retrasado o adelantado?",
+     "enunciado": "De acuerdo con el índice del desempeño del cronograma, ¿el proyecto va retrasado o adelantado?",
+     "respuesta": "Sigue ligeramente retrasado. SPI = $92 000 ÷ $93 000 = 0,989, muy cerca de 1, con SV = −$1 000: el retraso es ya de poco más del 1 % del trabajo planificado, frente al 21 % del mes 3."
+    },
+    {
+     "n": 3,
+     "pregunta": "3. ¿Cuál será el coste estimado a la finalización (según el presupuesto original)?",
+     "enunciado": "A este ritmo de gasto, ¿cuál será la estimación de coste al final del proyecto? Es decir, ¿cuál será el coste estimado del proyecto a su finalización (según el presupuesto original)?",
+     "respuesta": "EAC = AC + (BAC − EV) = $99 000 + ($115 000 − $92 000) = $122 000: un sobrecoste previsto de $7 000 (6,1 % sobre el BAC), frente a los $15 450 previstos en el mes 3. Con EAC = BAC ÷ CPI daría $123 750: las dos variantes ya casi coinciden, señal de que la eficiencia se ha estabilizado."
+    },
+    {
+     "n": 4,
+     "pregunta": "4. ¿Terminará con retraso o adelanto respecto a los seis meses?",
+     "enunciado": "A este ritmo, ¿se finalizará el proyecto con retraso o adelanto respecto a los seis meses previstos en el calendario?",
+     "respuesta": "Con un retraso mínimo. 6 ÷ 0,989 = 6,07 meses, unos dos días más de lo previsto: en la práctica, terminaría en plazo si se mantiene el ritmo del último bimestre."
+    },
+    {
+     "n": 5,
+     "pregunta": "5. ¿Las medidas del mes 3 tuvieron un efecto positivo o negativo?",
+     "enunciado": "Según estos datos, ¿las medidas puestas en marcha en el mes 3 han tenido un efecto positivo o negativo? Justifica la respuesta.",
+     "respuesta": "Positivo. Los dos índices mejoraron: el CPI pasó de 0,734 a 0,929 y el SPI de 0,788 a 0,989. Midiendo solo los meses 4 y 5, que es cuando actúan las medidas, se ganó trabajo por $49 450 gastando $41 000 con un plan de $39 000: CPI del periodo = 1,206 y SPI del periodo = 1,268, ambos por encima de 1. Eso redujo el sobrecoste previsto de $15 450 a $7 000 y casi eliminó el retraso. Aun así, el proyecto no se ha recuperado del todo: para cerrar dentro del BAC haría falta un rendimiento de TCPI = 1,44 en el último mes, poco realista, por lo que conviene mantener las medidas y comunicar al cliente un coste final cercano a $122 000."
+    }
+   ]
+  }
+ },
+ "periodo": {
+  "desde": 4,
+  "hasta": 5
+ },
+ "conclusion": "El valor ganado permitió detectar en el mes 3 un proyecto con sobrecoste y retraso importantes y proyectar sus consecuencias; en el mes 5, los mismos indicadores muestran que las acciones correctivas funcionaron. La lección es combinar enfoques: el marco clásico (línea base y valor ganado) mide con objetividad, y las iteraciones ágiles dan avances verificables y permiten reaccionar a tiempo.",
+ "hibrido": {
+  "idea": "No hay una metodología única: el Tema 2 pide adaptarla al proyecto y tomar de cada enfoque solo lo que hace falta. En este caso, el marco clásico del PMBOK® da la línea base contra la que se mide (el valor ganado no existe sin ella) y la ejecución ágil hace que el avance real sea trabajo terminado y aceptado, no una estimación de porcentaje. Las dos cosas juntas son las que permitieron corregir el proyecto entre el mes 3 y el 5.",
+  "clasico": [
+   {
+    "elemento": "Línea base de coste y alcance",
+    "uso": "BAC de $115 000 repartido en seis meses: la referencia del PV."
+   },
+   {
+    "elemento": "Valor ganado mensual con umbrales",
+    "uso": "CPI y SPI en cada corte; por debajo de 0,90 se escala a la dirección (5.8)."
+   },
+   {
+    "elemento": "Control formal de cambios",
+    "uso": "Toda petición nueva se evalúa en coste y plazo antes de entrar (5.7)."
+   },
+   {
+    "elemento": "Hitos e informes de estado",
+    "uso": "Cortes de control en los meses 3 y 5 con informe a la dirección y al cliente."
+   }
+  ],
+  "agil": [
+   {
+    "elemento": "Iteraciones de dos semanas",
+    "uso": "Doce iteraciones en seis meses; cada una cierra con un incremento utilizable."
+   },
+   {
+    "elemento": "Backlog priorizado con el cliente",
+    "uso": "Los paquetes pequeños se ordenan por valor y riesgo antes de cada iteración."
+   },
+   {
+    "elemento": "Revisión y criterios de aceptación",
+    "uso": "Solo cuenta como avance lo terminado y aceptado: el EV deja de ser una opinión."
+   },
+   {
+    "elemento": "Retrospectiva y reunión diaria",
+    "uso": "Las acciones correctivas salen del propio equipo y se revisan cada dos semanas."
+   }
+  ],
+  "encaje": [
+   {
+    "paso": "Plan",
+    "texto": "La línea base fija BAC, plazo y alcance comprometido (clásico)."
+   },
+   {
+    "paso": "Iterar",
+    "texto": "El equipo ejecuta paquetes pequeños en iteraciones de dos semanas (ágil)."
+   },
+   {
+    "paso": "Medir",
+    "texto": "Lo aceptado en cada revisión es el avance real con el que se calcula el EV (puente)."
+   },
+   {
+    "paso": "Controlar",
+    "texto": "Al corte mensual, CPI y SPI deciden si se escala y qué se corrige (clásico)."
+   },
+   {
+    "paso": "Adaptar",
+    "texto": "La retrospectiva convierte la corrección en cambios concretos para la siguiente iteración (ágil)."
+   }
+  ],
+  "iteraciones": {
+   "semanas": 2,
+   "por_mes": 2,
+   "total": 12
+  },
+  "nota": "Ampliación del portal: el pronóstico por velocidad y el burn-up no forman parte de las respuestas del documento, que siguen exactamente las fórmulas del Tema 5. La velocidad se mide en % del alcance terminado por mes (dos iteraciones)."
+ },
+ "referencias": [
+  "Project Management Institute. (2021). El estándar para la dirección de proyectos y Guía de los fundamentos para la dirección de proyectos (Guía del PMBOK®) (7.ª ed.). Project Management Institute.",
+  "Universidad Internacional de La Rioja. (2026). Temas 2, 4 y 5: Metodologías y estándares de diseño y gestión de proyectos; Planificación del proyecto tecnológico; Ejecución, control y cierre del proyecto [Material de la asignatura Metodología de Diseño y Gestión de Proyectos]. UNIR México."
+ ],
+ "enunciado": {
+  "comunes": [
+   "De acuerdo con el índice del desempeño del costo, ¿el proyecto va por encima del presupuesto o por debajo?",
+   "De acuerdo con el índice del desempeño del cronograma, ¿el proyecto va retrasado o adelantado?",
+   "A este ritmo de gasto, ¿cuál será la estimación de coste al final del proyecto? Es decir, ¿cuál será el coste estimado del proyecto a su finalización (según el presupuesto original)?",
+   "A este ritmo, ¿se finalizará el proyecto con retraso o adelanto respecto a los seis meses previstos en el calendario?"
+  ],
+  "A5": "¿Qué se podría hacer para controlar el proyecto? Debes basarte en al menos dos estrategias mencionadas a lo largo del curso.",
+  "B5": "Según estos datos, ¿las medidas puestas en marcha en el mes 3 han tenido un efecto positivo o negativo? Justifica la respuesta.",
+  "extension": "Extensión máxima: 4 páginas, fuente Calibri 12 e interlineado 1,5.",
+  "rubrica": [
+   {
+    "criterio": "C1",
+    "nombre": "Parte A",
+    "descripcion": "Responder correctamente y de forma bien justificada las cinco preguntas de la parte A",
+    "puntos": 4,
+    "peso": 40
+   },
+   {
+    "criterio": "C2",
+    "nombre": "Parte B",
+    "descripcion": "Responder correctamente y de forma bien justificada las cinco preguntas de la parte B",
+    "puntos": 4,
+    "peso": 40
+   },
+   {
+    "criterio": "C3",
+    "nombre": "Presentación",
+    "descripcion": "Correcta redacción: clara, sin faltas de ortografía y ajustada a la extensión máxima",
+    "puntos": 2,
+    "peso": 20
+   }
+  ]
+ }
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "arquitectura",
+    "titulo": "Arquitectura de despliegue",
+    "descripcion": "Navegador → Traefik v3 (TLS Let's Encrypt) → web nginx sin privilegios :8080 (Angular 22 + Tailwind 4) y api FastAPI :8000 → Redis 7 (valorganado_redis, broker y resultados) → worker Celery 5.6 (simulación Monte Carlo y ZIP de entregables) → PostgreSQL 15 de Supabase maestría con tablas ValorGanado_* y RLS forzado, en Docker Swarm de un nodo en el VPS de iAgentek.",
+    "svg": "arquitectura.svg",
+    "png": "arquitectura.png",
+    "html": "arquitectura.html"
+  },
+  {
+    "id": "flujo-evm",
+    "titulo": "Del dato a la decisión: flujo del valor ganado",
+    "descripcion": "PV, AC y avance de cada mes se acumulan al corte; EV = BAC × % de avance acumulado; EV frente a AC da CV y CPI, EV frente a PV da SV y SPI; de ahí salen EAC a, b y c, TCPI y la duración 6 ÷ SPI, y un umbral del 10 % decide entre medidas correctivas (mes 3) y seguimiento del plan (mes 5).",
+    "svg": "flujo-evm.svg",
+    "png": "flujo-evm.png",
+    "html": "flujo-evm.html"
+  },
+  {
+    "id": "cuadrante-cpi-spi",
+    "titulo": "Cuadrante CPI–SPI del proyecto",
+    "descripcion": "SPI en el eje horizontal y CPI en el vertical, cruzados en 1: la trayectoria acumulada de los meses 1 a 5 sube de (0,400; 0,438) a (0,989; 0,929) dentro del cuadrante retrasado y sobre presupuesto, con el mes 3 (0,788; 0,734) y el mes 5 resaltados; los índices solo de los meses 4–5 (1,268; 1,206) caen en el cuadrante adelantado y bajo presupuesto.",
+    "svg": "cuadrante-cpi-spi.svg",
+    "png": "cuadrante-cpi-spi.png",
+    "html": "cuadrante-cpi-spi.html"
+  },
+  {
+    "id": "linea-tiempo",
+    "titulo": "Los seis meses del proyecto",
+    "descripcion": "Línea base de $115 000 y 6 meses; corte del mes 3 (CPI 0,734, SPI 0,788, EAC $130 450, 7,61 meses: sobrecoste y retraso → medidas correctivas); meses 4–5 con CPI 1,206 y SPI 1,268 del periodo; corte del mes 5 (CPI 0,929, SPI 0,989) como verificación; cierre previsto con EAC de $122 000 en unos 6,07 meses.",
+    "svg": "linea-tiempo.svg",
+    "png": "linea-tiempo.png",
+    "html": "linea-tiempo.html"
+  },
+  {
+    "id": "secuencia-simulacion",
+    "titulo": "Secuencia de la simulación Monte Carlo",
+    "descripcion": "POST /api/simulacion, inserción en ValorGanado_simulaciones con estado pendiente, encolado de valorganado.simular_cierre en Redis, ejecución del Monte Carlo en el worker Celery y consulta de GET /api/simulacion/{id} cada 600 ms hasta que el estado es completada.",
+    "svg": "secuencia-simulacion.svg",
+    "png": "secuencia-simulacion.png",
+    "html": "secuencia-simulacion.html"
+  },
+  {
+    "id": "gantt-linea-base",
+    "titulo": "Línea base frente a lo real, mes a mes",
+    "descripcion": "PV de cada mes ($23 000, $15 000, $16 000, $19 000, $20 000 y $22 000; BAC $115 000) frente al AC de los meses 1 a 5 ($21 000, $18 000, $19 000, $20 000 y $21 000) y el avance real mensual (8, 15, 14, 21 y 22 %, acumulado 80 %), con los cortes del mes 3 (PV $54 000, AC $58 000, EV $42 550; CPI 0,734, SPI 0,788) y del mes 5 (PV $93 000, AC $99 000, EV $92 000; CPI 0,929, SPI 0,989).",
+    "svg": "gantt-linea-base.svg",
+    "png": "gantt-linea-base.png",
+    "html": "gantt-linea-base.html"
+  },
+  {
+    "id": "cascada-eac",
+    "titulo": "Del EAC del mes 3 al del mes 5",
+    "descripcion": "Cascada de EAC = AC + (BAC − EV): de $130 450 al mes 3 se suma el AC del mes 4 (+$20 000) y se resta su EV (−$24 150) hasta $126 300; se suma el AC del mes 5 (+$21 000) y se resta su EV (−$25 300) hasta $122 000 al mes 5. En total el AC sube $41 000, el EV $49 450 y el EAC baja $8 450, todavía $7 000 sobre el BAC de $115 000.",
+    "svg": "cascada-eac.svg",
+    "png": "cascada-eac.png",
+    "html": "cascada-eac.html"
+  },
+  {
+    "id": "espina-causas",
+    "titulo": "Causas posibles del desvío al mes 3",
+    "descripcion": "Espina de pescado del sobrecoste y retraso al mes 3 (CPI 0,734, SPI 0,788; CV −$15 450, SV −$11 450) con causas posibles en alcance, recursos, estimación, comunicación y seguimiento, y riesgos; cada espina remite a su estrategia de la Parte A5: acciones correctivas con umbrales de escalada y reuniones de estado (Tema 5, 5.8), control de cambios de alcance (5.7) y recursos y paquetes pequeños en un enfoque híbrido (Temas 2 y 4, 5.8).",
+    "svg": "espina-causas.svg",
+    "png": "espina-causas.png",
+    "html": "espina-causas.html"
+  },
+  {
+    "id": "ciclo-hibrido",
+    "titulo": "Enfoque híbrido: marco clásico con ejecución ágil",
+    "descripcion": "Arriba, el marco clásico del PMBOK®: línea base (BAC $115 000, 6 meses), control de cambios (5.7) y cortes de valor ganado en el mes 3 (CPI 0,734, SPI 0,788: escalar y corregir) y en el mes 5 (CPI 0,929, SPI 0,989; meses 4–5: CPI 1,206, SPI 1,268). Abajo, la ejecución ágil en iteraciones de dos semanas: backlog priorizado, iteración, revisión con el cliente y retrospectiva. Lo aceptado en la revisión es el avance real con el que se calcula el EV; las acciones correctivas del corte entran al backlog. Al pie, las 12 iteraciones con el avance real y el planificado de cada mes.",
+    "svg": "ciclo-hibrido.svg",
+    "png": "ciclo-hibrido.png",
+    "html": "ciclo-hibrido.html"
+  }
+]

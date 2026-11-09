@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1280 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="linea-tiempo-title linea-tiempo-desc" id="linea-tiempo-root">
+<title id="linea-tiempo-title">Los seis meses del proyecto</title>
+<desc id="linea-tiempo-desc">Línea de tiempo de seis meses: línea base de $115 000; corte del mes 3 con CPI 0,734 y SPI 0,788 que lleva a medidas correctivas; meses 4 y 5 con CPI 1,206 y SPI 1,268 del periodo; corte del mes 5 con CPI 0,929 y SPI 0,989; y cierre previsto con EAC de $122 000 en unos 6,07 meses.</desc>
+<defs>
+      <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;family=Noto+Serif:ital@0;1&amp;family=Noto+Sans+KR:wght@400;500;600&amp;family=Noto+Serif+KR:wght@400&amp;family=Noto+Sans+TC:wght@400;500;600&amp;family=Noto+Serif+TC:wght@400&amp;display=swap');
+      #linea-tiempo-root { --color-paper: #F7F8F7; --color-ink: #04202C; --color-muted: #5B7065; --color-accent: #304040;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-title: 'Sora', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace; }
+      #linea-tiempo-root { font-family: var(--font-sans); color: var(--color-ink); }
+      #linea-tiempo-root .diagram-container { width: 100%; overflow-x: auto; }
+      @media print {
+#linea-tiempo-root .diagram-container { overflow-x: visible; }
+}</style>
+<marker id="linea-tiempo-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#5B7065"/></marker>
+<marker id="linea-tiempo-arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#04202C"/></marker>
+<marker id="linea-tiempo-arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#304040"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#F7F8F7"/>
+<line x1="80" y1="256" x2="1224" y2="256" stroke="#5B7065" stroke-width="1" marker-end="url(#linea-tiempo-arrow)"/>
+<line x1="120" y1="251" x2="120" y2="261" stroke="#5B7065" stroke-width="1"/>
+<line x1="290" y1="251" x2="290" y2="261" stroke="#5B7065" stroke-width="1"/>
+<line x1="460" y1="251" x2="460" y2="261" stroke="#5B7065" stroke-width="1"/>
+<line x1="630" y1="251" x2="630" y2="261" stroke="#5B7065" stroke-width="1"/>
+<line x1="800" y1="251" x2="800" y2="261" stroke="#5B7065" stroke-width="1"/>
+<line x1="970" y1="251" x2="970" y2="261" stroke="#5B7065" stroke-width="1"/>
+<line x1="1140" y1="251" x2="1140" y2="261" stroke="#5B7065" stroke-width="1"/>
+<text x="205.0" y="278" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.14em">MES 1</text>
+<text x="205.0" y="294" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">CPI 0,438</text>
+<text x="205.0" y="307" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">SPI 0,400</text>
+<text x="375.0" y="278" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.14em">MES 2</text>
+<text x="375.0" y="294" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">CPI 0,678</text>
+<text x="375.0" y="307" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">SPI 0,696</text>
+<text x="545.0" y="278" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.14em">MES 3</text>
+<text x="545.0" y="294" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">CPI 0,734</text>
+<text x="545.0" y="307" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">SPI 0,788</text>
+<text x="715.0" y="278" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.14em">MES 4</text>
+<text x="715.0" y="294" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">CPI 0,855</text>
+<text x="715.0" y="307" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">SPI 0,914</text>
+<text x="885.0" y="278" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.14em">MES 5</text>
+<text x="885.0" y="294" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">CPI 0,929</text>
+<text x="885.0" y="307" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">SPI 0,989</text>
+<text x="1055.0" y="278" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.14em">MES 6</text>
+<text x="1055.0" y="294" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">sin medir</text>
+<text x="40" y="294" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.06em">acumulados</text>
+<line x1="120" y1="192" x2="120" y2="250" stroke="#04202c" stroke-width="1" stroke-opacity="0.35"/>
+<line x1="630" y1="192" x2="630" y2="247" stroke="#04202c" stroke-width="1" stroke-opacity="0.35"/>
+<line x1="970" y1="192" x2="970" y2="247" stroke="#04202c" stroke-width="1" stroke-opacity="0.35"/>
+<line x1="1151.1" y1="263" x2="1151.1" y2="352" stroke="#04202c" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.35"/>
+<path d="M 634,332 V 340 H 966 V 332" fill="none" stroke="#5B7065" stroke-width="1"/>
+<line x1="800" y1="340" x2="800" y2="352" stroke="#5B7065" stroke-width="1"/>
+<circle cx="120" cy="256" r="4" fill="#04202C"/>
+<circle cx="630" cy="256" r="9" fill="#F7F8F7" stroke="#04202C" stroke-width="1"/>
+<circle cx="630" cy="256" r="6" fill="#04202C"/>
+<circle cx="970" cy="256" r="9" fill="#F7F8F7" stroke="#04202C" stroke-width="1"/>
+<circle cx="970" cy="256" r="6" fill="#04202C"/>
+<circle cx="1151.1" cy="256" r="5" fill="#F7F8F7" stroke="#2E8B57" stroke-width="1.4" stroke-dasharray="3,2"/>
+<rect x="40" y="80" width="200" height="112" rx="6" fill="#F7F8F7"/>
+<rect x="40" y="80" width="200" height="112" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="48" y="88" width="42" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/><text x="69.0" y="97" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">INICIO</text>
+<text x="140" y="116" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Línea base</text>
+<rect x="56" y="128" width="168" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/><circle cx="68" cy="140" r="3.5" fill="#1F3A68"/><text x="78" y="144" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">BAC $115 000</text>
+<rect x="56" y="160" width="168" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/><text x="64" y="176" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">6 meses planificados</text>
+<rect x="480" y="48" width="300" height="144" rx="6" fill="#F7F8F7"/>
+<rect x="480" y="48" width="300" height="144" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="488" y="56" width="87" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/><text x="531.5" y="65" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">CORTE · PARTE A</text>
+<text x="630" y="84" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Mes 3 · diagnóstico</text>
+<rect x="496" y="96" width="268" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/><text x="504" y="112" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">CPI 0,734 · SPI 0,788</text><text x="756" y="112" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">&lt; 1</text>
+<rect x="496" y="128" width="268" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/><text x="504" y="144" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">EAC $130 450 · 7,61 meses</text>
+<rect x="496" y="160" width="268" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/><text x="504" y="176" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">Sobrecoste y retraso → medidas correctivas</text>
+<rect x="820" y="48" width="300" height="144" rx="6" fill="#F7F8F7"/>
+<rect x="820" y="48" width="300" height="144" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="828" y="56" width="87" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/><text x="871.5" y="65" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">CORTE · PARTE B</text>
+<text x="970" y="84" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Mes 5 · verificación</text>
+<rect x="836" y="96" width="268" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/><text x="844" y="112" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">CPI 0,929 · SPI 0,989</text><text x="1096" y="112" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">≈ 1</text>
+<rect x="836" y="128" width="268" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/><text x="844" y="144" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">EAC $122 000 · 6,07 meses</text>
+<rect x="836" y="160" width="268" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/><text x="844" y="176" fill="#04202C" font-size="11.5" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">Desvío dentro del umbral del 10 %</text>
+<rect x="660" y="352" width="280" height="112" rx="6" fill="#F7F8F7"/>
+<rect x="660" y="352" width="280" height="112" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="668" y="360" width="57" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/><text x="696.5" y="369" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">MESES 4–5</text>
+<text x="800" y="388" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Efecto de las medidas</text>
+<rect x="676" y="400" width="248" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/><circle cx="688" cy="412" r="3.5" fill="#2E8B57"/><text x="698" y="416" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">CPI 1,206 · SPI 1,268</text><text x="916" y="416" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">&gt; 1</text>
+<rect x="676" y="432" width="248" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/><text x="684" y="448" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">EV $49 450 · AC $41 000</text>
+<rect x="1000" y="352" width="240" height="112" rx="6" fill="#F7F8F7"/>
+<rect x="1000" y="352" width="240" height="112" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="1008" y="360" width="92" height="12" rx="2" fill="none" stroke="#04202C" stroke-width="0.8"/><text x="1054.0" y="369" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">MES 6 · PREVISTO</text>
+<text x="1120" y="388" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Cierre previsto</text>
+<rect x="1016" y="400" width="208" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/><circle cx="1028" cy="412" r="3.5" fill="#C0392B"/><text x="1038" y="416" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">EAC $122 000</text><text x="1216" y="416" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">+$7 000</text>
+<rect x="1016" y="432" width="208" height="24" rx="4" fill="#04202c" stroke="#5B7065" stroke-width="0.8" fill-opacity="0.05"/><text x="1024" y="448" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">≈ 6,07 meses</text><text x="1216" y="448" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">+2 días</text>
+<line x1="32" y1="504" x2="1248" y2="504" stroke="#04202c" stroke-width="0.8" stroke-opacity="0.1"/>
+<text x="32" y="532" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">LEYENDA</text>
+<circle cx="142" cy="529" r="9" fill="#F7F8F7" stroke="#04202C" stroke-width="1"/><circle cx="142" cy="529" r="6" fill="#04202C"/>
+<text x="168" y="533" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Corte de control</text>
+<circle cx="322" cy="529" r="4" fill="#04202C"/>
+<text x="348" y="533" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Hito del plan</text>
+<circle cx="482" cy="529" r="5" fill="#F7F8F7" stroke="#2E8B57" stroke-width="1.4" stroke-dasharray="3,2"/>
+<text x="508" y="533" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Fin proyectado (6 ÷ SPI del mes 5)</text>
+<path d="M 748,525 V 531 H 776 V 525" fill="none" stroke="#5B7065" stroke-width="1"/>
+<text x="788" y="533" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Periodo entre cortes</text>
+</svg>

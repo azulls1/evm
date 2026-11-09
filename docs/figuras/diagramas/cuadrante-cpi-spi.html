@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuadrante CPI–SPI del proyecto</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --color-paper: #F7F8F7; --color-ink: #04202C; --color-muted: #5B7065; --color-accent: #304040;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-title: 'Sora', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+body { font-family: var(--font-sans); background: var(--color-paper); color: var(--color-ink);
+  min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 1rem; }
+.frame { max-width: 1280px; width: 100%; }
+.diagram-container { width: 100%; overflow-x: auto; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.5rem; }
+h1 { font-family: var(--font-title); font-size: clamp(1.4rem, 2vw + 0.75rem, 1.9rem); font-weight: 600;
+  letter-spacing: -0.02em; line-height: 1.15; color: var(--color-ink); margin-bottom: 1.5rem; }
+svg { width: 100%; min-width: 1280px; display: block; }
+@media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+</style>
+</head>
+<body>
+<div class="frame">
+<p class="eyebrow">Cuadrante · diagrama Forest</p>
+<h1>Cuadrante CPI–SPI del proyecto</h1>
+<div class="diagram-container">
+<svg viewBox="0 0 1280 768" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cuadrante-cpi-spi-title cuadrante-cpi-spi-desc">
+<title id="cuadrante-cpi-spi-title">Cuadrante CPI–SPI del proyecto</title>
+<desc id="cuadrante-cpi-spi-desc">Cuadrante con SPI en el eje horizontal y CPI en el vertical, cruzados en 1: la trayectoria acumulada de los meses 1 a 5 sube desde (0,400; 0,438) hasta (0,989; 0,929) dentro del cuadrante de retraso y sobrecoste, con el mes 3 y el mes 5 resaltados, y los índices solo de los meses 4 y 5 (1,268; 1,206) en el cuadrante favorable.</desc>
+<defs>
+<marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#5B7065"/></marker>
+<marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#04202C"/></marker>
+<marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#304040"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#F7F8F7"/>
+<line x1="200.0" y1="664" x2="200.0" y2="670" stroke="#5B7065" stroke-width="0.8"/>
+<text x="200.0" y="684" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">0,3</text>
+<line x1="194" y1="664.0" x2="200" y2="664.0" stroke="#5B7065" stroke-width="0.8"/>
+<text x="186" y="667.0" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">0,3</text>
+<line x1="200.0" y1="64" x2="200.0" y2="664" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="200" y1="664.0" x2="800" y2="664.0" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="250.0" y1="664" x2="250.0" y2="670" stroke="#5B7065" stroke-width="0.8"/>
+<text x="250.0" y="684" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">0,4</text>
+<line x1="194" y1="614.0" x2="200" y2="614.0" stroke="#5B7065" stroke-width="0.8"/>
+<text x="186" y="617.0" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">0,4</text>
+<line x1="250.0" y1="64" x2="250.0" y2="664" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="200" y1="614.0" x2="800" y2="614.0" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="300.0" y1="664" x2="300.0" y2="670" stroke="#5B7065" stroke-width="0.8"/>
+<text x="300.0" y="684" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">0,5</text>
+<line x1="194" y1="564.0" x2="200" y2="564.0" stroke="#5B7065" stroke-width="0.8"/>
+<text x="186" y="567.0" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">0,5</text>
+<line x1="300.0" y1="64" x2="300.0" y2="664" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="200" y1="564.0" x2="800" y2="564.0" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="350.0" y1="664" x2="350.0" y2="670" stroke="#5B7065" stroke-width="0.8"/>
+<text x="350.0" y="684" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">0,6</text>
+<line x1="194" y1="514.0" x2="200" y2="514.0" stroke="#5B7065" stroke-width="0.8"/>
+<text x="186" y="517.0" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">0,6</text>
+<line x1="350.0" y1="64" x2="350.0" y2="664" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="200" y1="514.0" x2="800" y2="514.0" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="400.0" y1="664" x2="400.0" y2="670" stroke="#5B7065" stroke-width="0.8"/>
+<text x="400.0" y="684" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">0,7</text>
+<line x1="194" y1="464.0" x2="200" y2="464.0" stroke="#5B7065" stroke-width="0.8"/>
+<text x="186" y="467.0" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">0,7</text>
+<line x1="400.0" y1="64" x2="400.0" y2="664" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="200" y1="464.0" x2="800" y2="464.0" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="450.0" y1="664" x2="450.0" y2="670" stroke="#5B7065" stroke-width="0.8"/>
+<text x="450.0" y="684" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">0,8</text>
+<line x1="194" y1="414.0" x2="200" y2="414.0" stroke="#5B7065" stroke-width="0.8"/>
+<text x="186" y="417.0" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">0,8</text>
+<line x1="450.0" y1="64" x2="450.0" y2="664" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="200" y1="414.0" x2="800" y2="414.0" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="500.0" y1="664" x2="500.0" y2="670" stroke="#5B7065" stroke-width="0.8"/>
+<text x="500.0" y="684" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">0,9</text>
+<line x1="194" y1="364.0" x2="200" y2="364.0" stroke="#5B7065" stroke-width="0.8"/>
+<text x="186" y="367.0" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">0,9</text>
+<line x1="500.0" y1="64" x2="500.0" y2="664" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="200" y1="364.0" x2="800" y2="364.0" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="550.0" y1="664" x2="550.0" y2="670" stroke="#5B7065" stroke-width="0.8"/>
+<text x="550.0" y="684" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">1,0</text>
+<line x1="194" y1="314.0" x2="200" y2="314.0" stroke="#5B7065" stroke-width="0.8"/>
+<text x="186" y="317.0" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">1,0</text>
+<line x1="600.0" y1="664" x2="600.0" y2="670" stroke="#5B7065" stroke-width="0.8"/>
+<text x="600.0" y="684" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">1,1</text>
+<line x1="194" y1="264.0" x2="200" y2="264.0" stroke="#5B7065" stroke-width="0.8"/>
+<text x="186" y="267.0" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">1,1</text>
+<line x1="600.0" y1="64" x2="600.0" y2="664" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="200" y1="264.0" x2="800" y2="264.0" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="650.0" y1="664" x2="650.0" y2="670" stroke="#5B7065" stroke-width="0.8"/>
+<text x="650.0" y="684" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">1,2</text>
+<line x1="194" y1="214.0" x2="200" y2="214.0" stroke="#5B7065" stroke-width="0.8"/>
+<text x="186" y="217.0" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">1,2</text>
+<line x1="650.0" y1="64" x2="650.0" y2="664" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="200" y1="214.0" x2="800" y2="214.0" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="700.0" y1="664" x2="700.0" y2="670" stroke="#5B7065" stroke-width="0.8"/>
+<text x="700.0" y="684" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">1,3</text>
+<line x1="194" y1="164.0" x2="200" y2="164.0" stroke="#5B7065" stroke-width="0.8"/>
+<text x="186" y="167.0" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">1,3</text>
+<line x1="700.0" y1="64" x2="700.0" y2="664" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="200" y1="164.0" x2="800" y2="164.0" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="750.0" y1="664" x2="750.0" y2="670" stroke="#5B7065" stroke-width="0.8"/>
+<text x="750.0" y="684" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">1,4</text>
+<line x1="194" y1="114.0" x2="200" y2="114.0" stroke="#5B7065" stroke-width="0.8"/>
+<text x="186" y="117.0" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">1,4</text>
+<line x1="750.0" y1="64" x2="750.0" y2="664" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="200" y1="114.0" x2="800" y2="114.0" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="800.0" y1="664" x2="800.0" y2="670" stroke="#5B7065" stroke-width="0.8"/>
+<text x="800.0" y="684" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">1,5</text>
+<line x1="194" y1="64.0" x2="200" y2="64.0" stroke="#5B7065" stroke-width="0.8"/>
+<text x="186" y="67.0" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">1,5</text>
+<line x1="800.0" y1="64" x2="800.0" y2="664" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="200" y1="64.0" x2="800" y2="64.0" stroke="rgba(4,32,44,0.06)" stroke-width="0.8"/>
+<line x1="200" y1="664" x2="830" y2="664" stroke="#5B7065" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="200" y1="664" x2="200" y2="40" stroke="#5B7065" stroke-width="1" marker-end="url(#arrow)"/>
+<text x="842" y="668" fill="#04202C" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" letter-spacing="0.18em">SPI</text>
+<text x="200" y="28" fill="#04202C" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.18em">CPI</text>
+<line x1="550.0" y1="64" x2="550.0" y2="664" stroke="#04202C" stroke-width="1"/>
+<line x1="200" y1="314.0" x2="800" y2="314.0" stroke="#04202C" stroke-width="1"/>
+<text x="788" y="84" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="end" letter-spacing="0.18em">ADELANTADO</text>
+<text x="788" y="97" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="end" letter-spacing="0.18em">BAJO PRESUPUESTO</text>
+<text x="212" y="84" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="start" letter-spacing="0.18em">RETRASADO</text>
+<text x="212" y="97" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="start" letter-spacing="0.18em">BAJO PRESUPUESTO</text>
+<text x="788" y="632" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="end" letter-spacing="0.18em">ADELANTADO</text>
+<text x="788" y="645" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="end" letter-spacing="0.18em">SOBRE PRESUPUESTO</text>
+<text x="212" y="632" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="start" letter-spacing="0.18em">RETRASADO</text>
+<text x="212" y="645" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="start" letter-spacing="0.18em">SOBRE PRESUPUESTO</text>
+<polyline points="250.0,595.0 398.0,474.9 444.0,447.2 506.8,386.4 544.6,349.4" fill="none" stroke="#5B7065" stroke-width="1.4"/>
+<circle cx="684.1" cy="211.1" r="5" fill="#F7F8F7" stroke="#2E8B57" stroke-width="1.4" stroke-dasharray="3,2"/>
+<text x="696.1" y="209.1" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">Solo meses 4–5</text>
+<text x="696.1" y="223.1" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace">SPI 1,268 · CPI 1,206</text>
+<circle cx="250.0" cy="595.0" r="4" fill="#5B7065"/>
+<text x="262.0" y="599.0" fill="#4A5D53" font-size="11" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="start">Mes 1</text>
+<text x="262.0" y="612.0" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="start">SPI 0,400 · CPI 0,438</text>
+<circle cx="398.0" cy="474.9" r="4" fill="#5B7065"/>
+<text x="410.0" y="486.9" fill="#4A5D53" font-size="11" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="start">Mes 2</text>
+<text x="410.0" y="499.9" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="start">SPI 0,696 · CPI 0,678</text>
+<circle cx="444.0" cy="447.2" r="9" fill="#F7F8F7" stroke="#04202C" stroke-width="1"/>
+<circle cx="444.0" cy="447.2" r="5.5" fill="#04202C"/>
+<text x="430.0" y="432.2" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="end">Mes 3</text>
+<text x="430.0" y="445.2" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">SPI 0,788 · CPI 0,734</text>
+<circle cx="506.8" cy="386.4" r="4" fill="#5B7065"/>
+<text x="496.8" y="368.4" fill="#4A5D53" font-size="11" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="end">Mes 4</text>
+<text x="496.8" y="381.4" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">SPI 0,914 · CPI 0,855</text>
+<circle cx="544.6" cy="349.4" r="9" fill="#F7F8F7" stroke="#04202C" stroke-width="1"/>
+<circle cx="544.6" cy="349.4" r="5.5" fill="#04202C"/>
+<text x="530.6" y="331.4" fill="#04202C" font-size="12" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="end">Mes 5</text>
+<text x="530.6" y="344.4" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">SPI 0,989 · CPI 0,929</text>
+<rect x="904" y="64" width="336" height="600" rx="6" fill="#F7F8F7"/>
+<rect x="904" y="64" width="336" height="600" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="912" y="72" width="47" height="12" rx="2" fill="transparent" stroke="#04202C" stroke-width="0.8"/><text x="935.5" y="81" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">LECTURA</text>
+<text x="920" y="112" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">Mes 3 · diagnóstico</text>
+<text x="920" y="130" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">CPI 0,734 · SPI 0,788</text>
+<text x="920" y="152" fill="#4A5D53" font-size="12" font-family="'DM Sans', system-ui, sans-serif">Retrasado y sobre presupuesto: cada peso</text>
+<text x="920" y="168" fill="#4A5D53" font-size="12" font-family="'DM Sans', system-ui, sans-serif">gastado rinde 0,73 de trabajo y va el 78,8 %</text>
+<text x="920" y="184" fill="#4A5D53" font-size="12" font-family="'DM Sans', system-ui, sans-serif">de lo planificado.</text>
+<line x1="920" y1="208" x2="1224" y2="208" stroke="rgba(4,32,44,0.1)" stroke-width="0.8"/>
+<text x="920" y="240" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">Mes 5 · verificación</text>
+<text x="920" y="258" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">CPI 0,929 · SPI 0,989</text>
+<text x="920" y="280" fill="#4A5D53" font-size="12" font-family="'DM Sans', system-ui, sans-serif">Sigue en el mismo cuadrante, pero casi en</text>
+<text x="920" y="296" fill="#4A5D53" font-size="12" font-family="'DM Sans', system-ui, sans-serif">el cruce: el desvío ya está por debajo</text>
+<text x="920" y="312" fill="#4A5D53" font-size="12" font-family="'DM Sans', system-ui, sans-serif">del umbral del 10 %.</text>
+<line x1="920" y1="336" x2="1224" y2="336" stroke="rgba(4,32,44,0.1)" stroke-width="0.8"/>
+<text x="920" y="368" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600">Solo meses 4–5</text>
+<text x="920" y="386" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">CPI 1,206 · SPI 1,268</text>
+<text x="920" y="408" fill="#4A5D53" font-size="12" font-family="'DM Sans', system-ui, sans-serif">El periodo posterior a las medidas cae en</text>
+<text x="920" y="424" fill="#4A5D53" font-size="12" font-family="'DM Sans', system-ui, sans-serif">el cuadrante favorable: es lo que acerca</text>
+<text x="920" y="440" fill="#4A5D53" font-size="12" font-family="'DM Sans', system-ui, sans-serif">el acumulado al punto (1, 1).</text>
+<line x1="920" y1="464" x2="1224" y2="464" stroke="rgba(4,32,44,0.1)" stroke-width="0.8"/>
+<text x="920" y="496" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">CÓMO SE LEE</text>
+<text x="920" y="520" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">SPI = EV ÷ PV  ·  CPI = EV ÷ AC</text>
+<text x="920" y="544" fill="#4A5D53" font-size="12" font-family="'DM Sans', system-ui, sans-serif">Por debajo de 1: retraso (SPI) o</text>
+<text x="920" y="560" fill="#4A5D53" font-size="12" font-family="'DM Sans', system-ui, sans-serif">sobrecoste (CPI). Valores acumulados</text>
+<text x="920" y="576" fill="#4A5D53" font-size="12" font-family="'DM Sans', system-ui, sans-serif">al cierre de cada mes.</text>
+<line x1="32" y1="712" x2="1248" y2="712" stroke="rgba(4,32,44,0.1)" stroke-width="0.8"/>
+<text x="32" y="740" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">LEYENDA</text>
+<circle cx="142" cy="737" r="9" fill="#F7F8F7" stroke="#04202C" stroke-width="1"/><circle cx="142" cy="737" r="5.5" fill="#04202C"/>
+<text x="168" y="741" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Corte de control (mes 3 y mes 5)</text>
+<circle cx="402" cy="737" r="4" fill="#5B7065"/>
+<text x="428" y="741" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Acumulado al cierre del mes</text>
+<line x1="624" y1="737" x2="652" y2="737" stroke="#5B7065" stroke-width="1.4"/>
+<text x="664" y="741" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Trayectoria mes 1 → mes 5</text>
+<circle cx="858" cy="737" r="5" fill="#F7F8F7" stroke="#2E8B57" stroke-width="1.4" stroke-dasharray="3,2"/>
+<text x="884" y="741" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Índices del periodo, no acumulados</text>
+</svg>
+</div>
+</div>
+</body>
+</html>

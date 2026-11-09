@@ -1,0 +1,3 @@
+{
+  "/api": { "target": "https://evm.iagentek.com.mx", "secure": true, "changeOrigin": true }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enfoque híbrido: marco clásico con ejecución ágil</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --color-paper: #F7F8F7; --color-ink: #04202C; --color-muted: #5B7065; --color-accent: #304040;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-title: 'Sora', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+body { font-family: var(--font-sans); background: var(--color-paper); color: var(--color-ink);
+  min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 3rem 1rem; }
+.frame { max-width: 1280px; width: 100%; }
+.diagram-container { width: 100%; overflow-x: auto; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.5rem; }
+h1 { font-family: var(--font-title); font-size: clamp(1.4rem, 2vw + 0.75rem, 1.9rem); font-weight: 600;
+  letter-spacing: -0.02em; line-height: 1.15; color: var(--color-ink); margin-bottom: 1.5rem; }
+svg { width: 100%; min-width: 1280px; display: block; }
+@media print { .diagram-container { overflow-x: visible; } svg { min-width: 0; } }
+</style>
+</head>
+<body>
+<div class="frame">
+<p class="eyebrow">Ciclo híbrido · diagrama Forest</p>
+<h1>Enfoque híbrido: marco clásico con ejecución ágil</h1>
+<div class="diagram-container">
+<svg viewBox="0 0 1280 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ciclo-hibrido-title ciclo-hibrido-desc">
+<title id="ciclo-hibrido-title">Enfoque híbrido: marco clásico con ejecución ágil</title>
+<desc id="ciclo-hibrido-desc">Arriba, el marco clásico del PMBOK®: línea base (BAC $115 000, 6 meses), control de cambios (5.7) y cortes de valor ganado en el mes 3 (CPI 0,734, SPI 0,788: escalar y corregir) y en el mes 5 (CPI 0,929, SPI 0,989). Abajo, la ejecución ágil en iteraciones de 2 semanas: backlog priorizado, iteración, revisión con el cliente y retrospectiva. Lo aceptado en la revisión es el avance real con el que se calcula el EV, y las acciones correctivas del corte entran al backlog. Al pie, las 12 iteraciones con el avance real y el planificado de cada mes.</desc>
+<defs>
+<marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#5B7065"/></marker>
+<marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#04202C"/></marker>
+<marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#304040"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#F7F8F7"/>
+<path d="M 150,190 V 334" stroke="#5B7065" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+<path d="M 700,190 V 252 H 270 V 334" stroke="#04202C" stroke-width="1.2" fill="none" marker-end="url(#arrow-accent)"/>
+<path d="M 860,336 V 192" stroke="#2E8B57" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+<line x1="322" y1="392" x2="368" y2="392" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arrow)"/>
+<line x1="622" y1="392" x2="668" y2="392" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arrow)"/>
+<line x1="922" y1="392" x2="968" y2="392" stroke="#5B7065" stroke-width="1.2" marker-end="url(#arrow)"/>
+<path d="M 1095,454 V 482 H 195 V 456" stroke="#5B7065" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+<rect x="32" y="40" width="1216" height="176" rx="8" fill="rgba(4,32,44,0.025)" stroke="rgba(4,32,44,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+<rect x="48" y="33" width="208" height="14" fill="#F7F8F7"/>
+<text x="56" y="44" fill="#5B7065" font-size="8.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">MARCO CLÁSICO · PMBOK® · TEMA 5</text>
+<rect x="50" y="72" width="280" height="118" rx="6" fill="#F7F8F7"/>
+<rect x="50" y="72" width="280" height="118" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="58" y="80" width="62" height="12" rx="2" fill="transparent" stroke="#04202C" stroke-width="0.8"/><text x="89.0" y="89" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">LÍNEA BASE</text>
+<text x="190.0" y="112" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Plan y presupuesto</text>
+<rect x="62" y="124" width="256" height="24" rx="4" fill="rgba(4,32,44,0.05)" stroke="#5B7065" stroke-width="0.8"/><circle cx="74" cy="136" r="3.5" fill="#1F3A68"/><text x="84" y="140" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">BAC $115 000 · 6 meses</text>
+<rect x="62" y="154" width="256" height="24" rx="4" fill="rgba(4,32,44,0.05)" stroke="#5B7065" stroke-width="0.8"/><text x="70" y="170" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">PV por mes · alcance comprometido</text>
+<rect x="350" y="72" width="280" height="118" rx="6" fill="#F7F8F7"/>
+<rect x="350" y="72" width="280" height="118" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="358" y="80" width="77" height="12" rx="2" fill="transparent" stroke="#04202C" stroke-width="0.8"/><text x="396.5" y="89" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">CONTROL · 5.7</text>
+<text x="490.0" y="112" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Control de cambios</text>
+<rect x="362" y="124" width="256" height="24" rx="4" fill="rgba(4,32,44,0.05)" stroke="#5B7065" stroke-width="0.8"/><text x="370" y="140" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">Impacto en coste y plazo</text>
+<rect x="362" y="154" width="256" height="24" rx="4" fill="rgba(4,32,44,0.05)" stroke="#5B7065" stroke-width="0.8"/><text x="370" y="170" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">Alcance fijo dentro de la iteración</text>
+<rect x="650" y="72" width="280" height="118" rx="6" fill="#F7F8F7"/>
+<rect x="650" y="72" width="280" height="118" rx="6" fill="#EAF0EC" stroke="#04202C" stroke-width="1.6"/>
+<rect x="658" y="80" width="77" height="12" rx="2" fill="#04202C"/><text x="696.5" y="89" fill="#FFFFFF" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">CORTE · MES 3</text>
+<text x="790.0" y="112" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Medir y escalar</text>
+<rect x="662" y="124" width="256" height="24" rx="4" fill="rgba(4,32,44,0.05)" stroke="#5B7065" stroke-width="0.8"/><circle cx="674" cy="136" r="3.5" fill="#C0392B"/><text x="684" y="140" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">CPI 0,734 · SPI 0,788</text><text x="910" y="140" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">&lt; 0,90</text>
+<rect x="662" y="154" width="256" height="24" rx="4" fill="rgba(4,32,44,0.05)" stroke="#5B7065" stroke-width="0.8"/><text x="670" y="170" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">EAC $130 450 → corregir</text>
+<rect x="950" y="72" width="280" height="118" rx="6" fill="#F7F8F7"/>
+<rect x="950" y="72" width="280" height="118" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="958" y="80" width="77" height="12" rx="2" fill="transparent" stroke="#04202C" stroke-width="0.8"/><text x="996.5" y="89" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">CORTE · MES 5</text>
+<text x="1090.0" y="112" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Verificar el efecto</text>
+<rect x="962" y="124" width="256" height="24" rx="4" fill="rgba(4,32,44,0.05)" stroke="#5B7065" stroke-width="0.8"/><circle cx="974" cy="136" r="3.5" fill="#2E8B57"/><text x="984" y="140" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">CPI 0,929 · SPI 0,989</text><text x="1210" y="140" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="end">≈ 1</text>
+<rect x="962" y="154" width="256" height="24" rx="4" fill="rgba(4,32,44,0.05)" stroke="#5B7065" stroke-width="0.8"/><text x="970" y="170" fill="#04202C" font-size="9.5" font-family="'JetBrains Mono', ui-monospace, monospace">Meses 4–5: CPI 1,206 · SPI 1,268</text>
+<rect x="32" y="304" width="1216" height="196" rx="8" fill="rgba(4,32,44,0.025)" stroke="rgba(4,32,44,0.3)" stroke-width="1" stroke-dasharray="4,3"/>
+<rect x="48" y="297" width="326" height="14" fill="#F7F8F7"/>
+<text x="56" y="308" fill="#5B7065" font-size="8.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">EJECUCIÓN ÁGIL · ITERACIONES DE 2 SEMANAS · TEMA 2</text>
+<rect x="70" y="336" width="250" height="118" rx="6" fill="#F7F8F7"/>
+<rect x="70" y="336" width="250" height="118" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="78" y="344" width="47" height="12" rx="2" fill="transparent" stroke="#04202C" stroke-width="0.8"/><text x="101.5" y="353" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">BACKLOG</text>
+<text x="195.0" y="376" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Backlog priorizado</text>
+<rect x="82" y="388" width="226" height="24" rx="4" fill="rgba(4,32,44,0.05)" stroke="#5B7065" stroke-width="0.8"/><text x="90" y="404" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">Paquetes pequeños</text>
+<rect x="82" y="418" width="226" height="24" rx="4" fill="rgba(4,32,44,0.05)" stroke="#5B7065" stroke-width="0.8"/><text x="90" y="434" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">Orden por valor y riesgo</text>
+<rect x="370" y="336" width="250" height="118" rx="6" fill="#F7F8F7"/>
+<rect x="370" y="336" width="250" height="118" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="378" y="344" width="57" height="12" rx="2" fill="transparent" stroke="#04202C" stroke-width="0.8"/><text x="406.5" y="353" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">ITERACIÓN</text>
+<text x="495.0" y="376" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Iteración de 2 semanas</text>
+<rect x="382" y="388" width="226" height="24" rx="4" fill="rgba(4,32,44,0.05)" stroke="#5B7065" stroke-width="0.8"/><text x="390" y="404" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">Reunión diaria ≤ 15 min</text>
+<rect x="382" y="418" width="226" height="24" rx="4" fill="rgba(4,32,44,0.05)" stroke="#5B7065" stroke-width="0.8"/><text x="390" y="434" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">Incremento utilizable</text>
+<rect x="670" y="336" width="250" height="118" rx="6" fill="#F7F8F7"/>
+<rect x="670" y="336" width="250" height="118" rx="6" fill="#EAF0EC" stroke="#04202C" stroke-width="1.6"/>
+<rect x="678" y="344" width="52" height="12" rx="2" fill="#04202C"/><text x="704.0" y="353" fill="#FFFFFF" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">REVISIÓN</text>
+<text x="795.0" y="376" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Revisión con el cliente</text>
+<rect x="682" y="388" width="226" height="24" rx="4" fill="rgba(4,32,44,0.05)" stroke="#5B7065" stroke-width="0.8"/><text x="690" y="404" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">Criterios de aceptación</text>
+<rect x="682" y="418" width="226" height="24" rx="4" fill="rgba(4,32,44,0.05)" stroke="#5B7065" stroke-width="0.8"/><circle cx="694" cy="430" r="3.5" fill="#2E8B57"/><text x="704" y="434" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">Solo lo aceptado es avance</text>
+<rect x="970" y="336" width="250" height="118" rx="6" fill="#F7F8F7"/>
+<rect x="970" y="336" width="250" height="118" rx="6" fill="#FFFFFF" stroke="#04202C" stroke-width="1"/>
+<rect x="978" y="344" width="77" height="12" rx="2" fill="transparent" stroke="#04202C" stroke-width="0.8"/><text x="1016.5" y="353" fill="#04202C" font-size="7" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.08em">RETROSPECTIVA</text>
+<text x="1095.0" y="376" fill="#04202C" font-size="13" font-family="'DM Sans', system-ui, sans-serif" font-weight="600" text-anchor="middle">Retrospectiva</text>
+<rect x="982" y="388" width="226" height="24" rx="4" fill="rgba(4,32,44,0.05)" stroke="#5B7065" stroke-width="0.8"/><text x="990" y="404" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">Qué corregir y cómo</text>
+<rect x="982" y="418" width="226" height="24" rx="4" fill="rgba(4,32,44,0.05)" stroke="#5B7065" stroke-width="0.8"/><text x="990" y="434" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif" font-weight="500">Acciones del propio equipo</text>
+<rect x="91" y="236" width="118" height="12" rx="2" fill="#F7F8F7"/><text x="150.0" y="245" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">ALCANCE COMPROMETIDO</text>
+<rect x="384.5" y="246" width="171" height="12" rx="2" fill="#F7F8F7"/><text x="470.0" y="255" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">ACCIONES CORRECTIVAS → BACKLOG</text>
+<rect x="774.5" y="270" width="171" height="12" rx="2" fill="#F7F8F7"/><text x="860.0" y="279" fill="#2E8B57" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">AVANCE ACEPTADO → EV = BAC × %</text>
+<rect x="588.5" y="476" width="113" height="12" rx="2" fill="#F7F8F7"/><text x="645.0" y="485" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle" letter-spacing="0.06em">SIGUIENTE ITERACIÓN</text>
+<text x="32" y="538" fill="#5B7065" font-size="8.5" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">12 ITERACIONES · AVANCE TERMINADO ACUMULADO</text>
+<line x1="80" y1="560" x2="1244" y2="560" stroke="#5B7065" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="80.0" y1="553" x2="80.0" y2="567" stroke="#5B7065" stroke-width="1"/>
+<text x="127.9" y="552" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">I1</text>
+<line x1="175.8" y1="556" x2="175.8" y2="564" stroke="#5B7065" stroke-width="1"/>
+<text x="223.75" y="552" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">I2</text>
+<line x1="271.7" y1="553" x2="271.7" y2="567" stroke="#5B7065" stroke-width="1"/>
+<text x="319.6" y="552" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">I3</text>
+<line x1="367.5" y1="556" x2="367.5" y2="564" stroke="#5B7065" stroke-width="1"/>
+<text x="415.4" y="552" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">I4</text>
+<line x1="463.3" y1="553" x2="463.3" y2="567" stroke="#5B7065" stroke-width="1"/>
+<text x="511.25" y="552" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">I5</text>
+<line x1="559.2" y1="556" x2="559.2" y2="564" stroke="#5B7065" stroke-width="1"/>
+<text x="607.1" y="552" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">I6</text>
+<line x1="655.0" y1="553" x2="655.0" y2="567" stroke="#5B7065" stroke-width="1"/>
+<text x="702.9" y="552" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">I7</text>
+<line x1="750.8" y1="556" x2="750.8" y2="564" stroke="#5B7065" stroke-width="1"/>
+<text x="798.75" y="552" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">I8</text>
+<line x1="846.7" y1="553" x2="846.7" y2="567" stroke="#5B7065" stroke-width="1"/>
+<text x="894.6" y="552" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">I9</text>
+<line x1="942.5" y1="556" x2="942.5" y2="564" stroke="#5B7065" stroke-width="1"/>
+<text x="990.4" y="552" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">I10</text>
+<line x1="1038.3" y1="553" x2="1038.3" y2="567" stroke="#5B7065" stroke-width="1"/>
+<text x="1086.25" y="552" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">I11</text>
+<line x1="1134.2" y1="556" x2="1134.2" y2="564" stroke="#5B7065" stroke-width="1"/>
+<text x="1182.1" y="552" fill="#5B7065" font-size="7.5" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">I12</text>
+<line x1="1230.0" y1="553" x2="1230.0" y2="567" stroke="#5B7065" stroke-width="1"/>
+<text x="271.7" y="582" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.12em">MES 1</text>
+<text x="271.7" y="598" fill="#2E8B57" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">real 8 %</text>
+<text x="271.7" y="611" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">plan 20 %</text>
+<text x="463.3" y="582" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.12em">MES 2</text>
+<text x="463.3" y="598" fill="#2E8B57" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">real 23 %</text>
+<text x="463.3" y="611" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">plan 33 %</text>
+<text x="655.0" y="582" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.12em">MES 3</text>
+<text x="655.0" y="598" fill="#2E8B57" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">real 37 %</text>
+<text x="655.0" y="611" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">plan 47 %</text>
+<circle cx="655.0" cy="560" r="8" fill="#F7F8F7" stroke="#04202C" stroke-width="1"/><circle cx="655.0" cy="560" r="5" fill="#04202C"/>
+<text x="846.7" y="582" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.12em">MES 4</text>
+<text x="846.7" y="598" fill="#2E8B57" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">real 58 %</text>
+<text x="846.7" y="611" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">plan 63 %</text>
+<text x="1038.3" y="582" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.12em">MES 5</text>
+<text x="1038.3" y="598" fill="#2E8B57" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">real 80 %</text>
+<text x="1038.3" y="611" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">plan 81 %</text>
+<circle cx="1038.3" cy="560" r="8" fill="#F7F8F7" stroke="#04202C" stroke-width="1"/><circle cx="1038.3" cy="560" r="5" fill="#04202C"/>
+<text x="1230.0" y="582" fill="#04202C" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" text-anchor="middle" letter-spacing="0.12em">MES 6</text>
+<text x="1230.0" y="598" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">real —</text>
+<text x="1230.0" y="611" fill="#5B7065" font-size="9" font-family="'JetBrains Mono', ui-monospace, monospace" text-anchor="middle">plan 100 %</text>
+<line x1="32" y1="640" x2="1248" y2="640" stroke="rgba(4,32,44,0.1)" stroke-width="0.8"/>
+<text x="32" y="668" fill="#5B7065" font-size="8" font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500" letter-spacing="0.14em">LEYENDA</text>
+<line x1="128" y1="665" x2="156" y2="665" stroke="#04202C" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+<text x="168" y="669" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Del control clásico a la ejecución</text>
+<line x1="418" y1="665" x2="446" y2="665" stroke="#2E8B57" stroke-width="1.2" marker-end="url(#arrow)"/>
+<text x="458" y="669" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">De la ejecución a la medición (EV)</text>
+<rect x="698" y="657" width="28" height="16" rx="4" fill="#EAF0EC" stroke="#04202C" stroke-width="1.6"/>
+<text x="738" y="669" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Punto de encuentro de los dos enfoques</text>
+<circle cx="1012" cy="665" r="8" fill="#F7F8F7" stroke="#04202C" stroke-width="1"/><circle cx="1012" cy="665" r="5" fill="#04202C"/>
+<text x="1038" y="669" fill="#04202C" font-size="11" font-family="'DM Sans', system-ui, sans-serif">Corte de control</text>
+</svg>
+</div>
+</div>
+</body>
+</html>
